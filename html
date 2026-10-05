@@ -1,0 +1,1791 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Mama ♡</title>
+
+<style>
+
+/* =========================
+   FONTS
+========================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&family=Patrick+Hand&display=swap');
+
+
+/* =========================
+   COLORS
+========================= */
+
+:root {
+  --night: #0d1020;
+  --night2: #171a31;
+  --cream: #fffaf0;
+  --paper: #fffdf7;
+  --gold: #e8c77b;
+  --gold2: #f4dfa7;
+  --rose: #d99aaa;
+  --rose2: #f0c7d0;
+  --ink: #332b31;
+  --muted: #75666c;
+  --green: #9bb29c;
+  --shadow: rgba(30, 20, 30, .16);
+}
+
+
+/* =========================
+   BASIC
+========================= */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--cream);
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+}
+
+button {
+  font: inherit;
+}
+
+
+/* =========================
+   STARS
+========================= */
+
+#stars {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.star {
+  position: absolute;
+  color: white;
+  opacity: .6;
+  animation: twinkle 3s ease-in-out infinite;
+}
+
+@keyframes twinkle {
+
+  0%,100% {
+    opacity: .15;
+    transform: scale(.8);
+  }
+
+  50% {
+    opacity: .9;
+    transform: scale(1.3);
+  }
+
+}
+
+
+/* =========================
+   FLOATING FLOWERS / HEARTS
+========================= */
+
+.floaters {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 20;
+}
+
+.floater {
+  position: absolute;
+  bottom: -40px;
+  animation: rise linear forwards;
+}
+
+@keyframes rise {
+
+  from {
+    transform: translateY(0) rotate(0);
+    opacity: 0;
+  }
+
+  15% {
+    opacity: .7;
+  }
+
+  to {
+    transform:
+      translateY(-110vh)
+      rotate(25deg);
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+  min-height: 100vh;
+
+  background:
+    radial-gradient(
+      circle at 50% 35%,
+      rgba(232,199,123,.18),
+      transparent 28%
+    ),
+    linear-gradient(
+      160deg,
+      var(--night),
+      var(--night2)
+    );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+
+  padding: 50px 22px;
+
+  position: relative;
+
+  overflow: hidden;
+}
+
+.hero-content {
+
+  position: relative;
+  z-index: 2;
+
+  width: min(850px, 100%);
+
+}
+
+.hero-small {
+
+  font-size: 12px;
+
+  letter-spacing: 5px;
+
+  text-transform: uppercase;
+
+  color: var(--gold2);
+
+  animation: fadeUp 1.5s ease both;
+
+}
+
+.hero h1 {
+
+  font-family: "Cormorant Garamond", serif;
+
+  font-size:
+    clamp(
+      70px,
+      16vw,
+      150px
+    );
+
+  line-height: .75;
+
+  font-weight: 600;
+
+  margin: 35px 0;
+
+  animation:
+    fadeUp
+    1.5s
+    .2s
+    ease
+    both;
+
+}
+
+.hero h1 span {
+
+  display: block;
+
+  color: var(--gold);
+
+}
+
+.hero-subtitle {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      22px,
+      4vw,
+      32px
+    );
+
+  color: #eee7dc;
+
+  max-width: 700px;
+
+  margin: auto;
+
+  line-height: 1.5;
+
+  animation:
+    fadeUp
+    1.5s
+    .4s
+    ease
+    both;
+
+}
+
+.hero-button {
+
+  margin-top: 45px;
+
+  border:
+    1px solid
+    rgba(244,223,167,.5);
+
+  background:
+    rgba(255,255,255,.05);
+
+  color: white;
+
+  padding:
+    14px 28px;
+
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition: .3s;
+
+  animation:
+    fadeUp
+    1.5s
+    .6s
+    ease
+    both;
+
+}
+
+.hero-button:hover {
+
+  background:
+    var(--gold);
+
+  color:
+    var(--night);
+
+  transform:
+    translateY(-4px);
+
+}
+
+@keyframes fadeUp {
+
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
+
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+
+  padding:
+    110px 20px;
+
+  position: relative;
+
+}
+
+.container {
+
+  width:
+    min(950px, 100%);
+
+  margin:
+    auto;
+
+}
+
+.label {
+
+  color:
+    var(--rose);
+
+  font-size:
+    11px;
+
+  letter-spacing:
+    4px;
+
+  text-transform:
+    uppercase;
+
+  font-weight:
+    600;
+
+}
+
+.title {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      45px,
+      8vw,
+      80px
+    );
+
+  line-height:
+    .95;
+
+  margin:
+    15px 0 35px;
+
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+
+  background:
+
+    radial-gradient(
+      circle at 10% 20%,
+      rgba(217,154,170,.15),
+      transparent 25%
+    ),
+
+    var(--cream);
+
+}
+
+.intro-text {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      25px,
+      4vw,
+      35px
+    );
+
+  line-height:
+    1.55;
+
+  max-width:
+    800px;
+
+}
+
+.intro-text em {
+
+  color:
+    var(--rose);
+
+}
+
+
+/* =========================
+   LITTLE WORDS
+========================= */
+
+.words {
+
+  display:
+    flex;
+
+  flex-wrap:
+    wrap;
+
+  gap:
+    12px;
+
+  margin:
+    35px 0;
+
+}
+
+.word {
+
+  padding:
+    10px 17px;
+
+  border-radius:
+    999px;
+
+  background:
+    #f1dce0;
+
+  color:
+    #654c54;
+
+  font-size:
+    14px;
+
+}
+
+
+/* =========================
+   LETTER
+========================= */
+
+.letter-section {
+
+  background:
+    #f5ebe1;
+
+}
+
+.paper {
+
+  background:
+    var(--paper);
+
+  padding:
+    clamp(
+      30px,
+      7vw,
+      70px
+    );
+
+  box-shadow:
+    0 20px 60px
+    var(--shadow);
+
+  position:
+    relative;
+
+  transform:
+    rotate(-.4deg);
+
+}
+
+.paper::before {
+
+  content: "";
+
+  position:
+    absolute;
+
+  width:
+    100px;
+
+  height:
+    28px;
+
+  background:
+    rgba(232,199,123,.55);
+
+  top:
+    -13px;
+
+  left:
+    50%;
+
+  transform:
+    translateX(-50%)
+    rotate(-2deg);
+
+}
+
+.paper p {
+
+  line-height:
+    2;
+
+  color:
+    var(--muted);
+
+}
+
+.paper .opening {
+
+  font-family:
+    "Patrick Hand",
+    cursive;
+
+  font-size:
+    32px;
+
+  color:
+    var(--ink);
+
+}
+
+.signature {
+
+  font-family:
+    "Patrick Hand",
+    cursive;
+
+  font-size:
+    30px;
+
+  margin-top:
+    40px;
+
+}
+
+
+/* =========================
+   TEACHER / MOM
+========================= */
+
+.split {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    1fr 1fr;
+
+  gap:
+    25px;
+
+  margin-top:
+    45px;
+
+}
+
+.split-card {
+
+  padding:
+    40px 30px;
+
+  border-radius:
+    20px;
+
+  min-height:
+    320px;
+
+}
+
+.teacher-card {
+
+  background:
+    #dedaf0;
+
+}
+
+.mom-card {
+
+  background:
+    #f1ccd4;
+
+}
+
+.split-card h3 {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    38px;
+
+  margin-top:
+    0;
+
+}
+
+.split-card p {
+
+  line-height:
+    1.8;
+
+  color:
+    var(--muted);
+
+}
+
+
+/* =========================
+   LESSONS
+========================= */
+
+.lessons {
+
+  background:
+    #eef1e8;
+
+}
+
+.lesson-grid {
+
+  display:
+    grid;
+
+  grid-template-columns:
+    repeat(3,1fr);
+
+  gap:
+    18px;
+
+  margin-top:
+    45px;
+
+}
+
+.lesson {
+
+  background:
+    rgba(255,255,255,.7);
+
+  padding:
+    30px 24px;
+
+  border-radius:
+    18px;
+
+  min-height:
+    190px;
+
+  transition:
+    .3s;
+
+}
+
+.lesson:hover {
+
+  transform:
+    translateY(-7px)
+    rotate(-1deg);
+
+}
+
+.lesson-number {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    50px;
+
+  color:
+    var(--green);
+
+}
+
+.lesson h3 {
+
+  font-size:
+    23px;
+
+  margin:
+    10px 0;
+
+}
+
+.lesson p {
+
+  color:
+    var(--muted);
+
+  line-height:
+    1.7;
+
+}
+
+
+/* =========================
+   LICENSED TEACHER
+========================= */
+
+.license {
+
+  background:
+    linear-gradient(
+      135deg,
+      #171a31,
+      #272445
+    );
+
+  color:
+    white;
+
+  text-align:
+    center;
+
+}
+
+.license .label {
+
+  color:
+    var(--gold);
+
+}
+
+.license .title {
+
+  color:
+    white;
+
+}
+
+.license-text {
+
+  max-width:
+    720px;
+
+  margin:
+    auto;
+
+  color:
+    #d9d5df;
+
+  line-height:
+    1.9;
+
+  font-size:
+    17px;
+
+}
+
+.badge {
+
+  display:
+    inline-flex;
+
+  align-items:
+    center;
+
+  gap:
+    10px;
+
+  margin-top:
+    35px;
+
+  border:
+    1px solid
+    rgba(244,223,167,.35);
+
+  padding:
+    13px 20px;
+
+  border-radius:
+    999px;
+
+  color:
+    var(--gold2);
+
+}
+
+
+/* =========================
+   QUOTE
+========================= */
+
+.quote {
+
+  background:
+    var(--cream);
+
+  text-align:
+    center;
+
+}
+
+.quote blockquote {
+
+  max-width:
+    850px;
+
+  margin:
+    auto;
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      35px,
+      7vw,
+      65px
+    );
+
+  line-height:
+    1.1;
+
+}
+
+.quote blockquote span {
+
+  color:
+    var(--rose);
+
+}
+
+
+/* =========================
+   SECRET
+========================= */
+
+.secret {
+
+  text-align:
+    center;
+
+  background:
+    #f4e1e5;
+
+}
+
+.secret-button {
+
+  border:
+    0;
+
+  background:
+    var(--ink);
+
+  color:
+    white;
+
+  padding:
+    15px 25px;
+
+  border-radius:
+    999px;
+
+  cursor:
+    pointer;
+
+  transition:
+    .3s;
+
+}
+
+.secret-button:hover {
+
+  transform:
+    scale(1.04);
+
+}
+
+.secret-note {
+
+  max-height:
+    0;
+
+  overflow:
+    hidden;
+
+  opacity:
+    0;
+
+  transition:
+    max-height .8s ease,
+    opacity .5s ease;
+
+  max-width:
+    750px;
+
+  margin:
+    auto;
+
+}
+
+.secret-note.show {
+
+  max-height:
+    1300px;
+
+  opacity:
+    1;
+
+  margin-top:
+    40px;
+
+}
+
+.secret-note-inner {
+
+  background:
+    var(--paper);
+
+  padding:
+    40px;
+
+  box-shadow:
+    0 15px 45px
+    var(--shadow);
+
+  text-align:
+    left;
+
+}
+
+.secret-note-inner p {
+
+  line-height:
+    1.9;
+
+  color:
+    var(--muted);
+
+}
+
+
+/* =========================
+   FINAL
+========================= */
+
+.final {
+
+  min-height:
+    100vh;
+
+  display:
+    flex;
+
+  align-items:
+    center;
+
+  justify-content:
+    center;
+
+  text-align:
+    center;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(232,199,123,.18),
+      transparent 30%
+    ),
+
+    var(--night);
+
+  color:
+    white;
+
+}
+
+.final-content {
+
+  max-width:
+    850px;
+
+}
+
+.final h2 {
+
+  font-family:
+    "Cormorant Garamond",
+    serif;
+
+  font-size:
+    clamp(
+      55px,
+      10vw,
+      105px
+    );
+
+  line-height:
+    .9;
+
+  margin:
+    25px 0;
+
+}
+
+.final h2 span {
+
+  color:
+    var(--gold);
+
+}
+
+.final p {
+
+  color:
+    #d7d1db;
+
+  line-height:
+    1.9;
+
+  font-size:
+    17px;
+
+}
+
+.final-heart {
+
+  font-size:
+    40px;
+
+  color:
+    var(--rose2);
+
+  margin-top:
+    40px;
+
+  animation:
+    heartbeat
+    1.8s
+    ease-in-out
+    infinite;
+
+}
+
+@keyframes heartbeat {
+
+  0%,100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.15);
+  }
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+  padding:
+    30px 20px;
+
+  background:
+    var(--night);
+
+  color:
+    #8d8895;
+
+  text-align:
+    center;
+
+  font-size:
+    12px;
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:700px) {
+
+  section {
+    padding:
+      80px 18px;
+  }
+
+  .split {
+    grid-template-columns:
+      1fr;
+  }
+
+  .lesson-grid {
+    grid-template-columns:
+      1fr;
+  }
+
+  .hero h1 {
+    font-size:
+      72px;
+  }
+
+  .paper {
+    padding:
+      30px 23px;
+  }
+
+  .secret-note-inner {
+    padding:
+      28px 22px;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================
+     BACKGROUND EFFECTS
+========================= -->
+
+<div id="stars"></div>
+
+<div class="floaters"></div>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+  <div class="hero-content">
+
+    <div class="hero-small">
+
+      My first teacher.
+      My safest place.
+      My forever kakampi.
+
+    </div>
+
+
+    <h1>
+
+      For
+
+      <span>
+        Mama.
+      </span>
+
+    </h1>
+
+
+    <p class="hero-subtitle">
+
+      My mom.
+      My mama.
+      My kakampi.
+      My taga-gabay.
+
+      <br>
+
+      The person who taught me
+      long before I even knew
+      what a lesson was.
+
+    </p>
+
+
+    <button
+      class="hero-button"
+      data-scroll="begin">
+
+      I made this for you ♡
+
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     INTRO
+========================= -->
+
+<section
+  class="intro"
+  id="begin">
+
+  <div class="container">
+
+    <div class="label">
+      More than just "Mom"
+    </div>
+
+
+    <h2 class="title">
+
+      You have always been
+      <br>
+      so many things to me.
+
+    </h2>
+
+
+    <div class="words">
+
+      <div class="word">
+        Mama
+      </div>
+
+      <div class="word">
+        Kakampi
+      </div>
+
+      <div class="word">
+        Taga-gabay
+      </div>
+
+      <div class="word">
+        Teacher
+      </div>
+
+      <div class="word">
+        Tagapayo
+      </div>
+
+      <div class="word">
+        Home
+      </div>
+
+    </div>
+
+
+    <p class="intro-text">
+
+      You're my <em>Mom</em> —
+      the person I can always come home to.
+
+      <br><br>
+
+      You're my <em>Mama</em> —
+      the one who somehow knows
+      when something is wrong
+      even when I say I'm okay.
+
+      <br><br>
+
+      You're my <em>kakampi</em> —
+      the person who stands beside me,
+      believes in me,
+      and makes difficult things
+      feel a little less scary.
+
+      <br><br>
+
+      You're my <em>taga-gabay</em> —
+      the person who reminds me
+      where to go when I don't know
+      what I'm doing.
+
+      <br><br>
+
+      You're my <em>teacher</em> —
+      not only because teaching
+      is what you do,
+      but because so much of who I am
+      came from the things
+      you taught me.
+
+    </p>
+
+
+    <div style="
+      margin-top:60px;
+      text-align:center;
+      font-family:'Cormorant Garamond',serif;
+      font-size:clamp(28px,5vw,42px);
+      color:#332b31;
+    ">
+
+      <p>
+        I could call you a lot of things.
+      </p>
+
+      <p style="color:#d99aaa;">
+
+        But "Mom"
+        will always mean the most.
+
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     LETTER
+========================= -->
+
+<section class="letter-section">
+
+  <div class="container">
+
+    <div class="paper">
+
+      <p class="opening">
+        Dear Mama,
+      </p>
+
+
+      <p>
+
+        I could have written
+        a normal Teacher's Day message.
+
+        Something short.
+        Something simple.
+
+        Something that just says
+        "Thank you for everything."
+
+      </p>
+
+
+      <p>
+
+        But honestly?
+
+        That doesn't feel like enough
+        when I'm writing this for you.
+
+      </p>
+
+
+      <p>
+
+        Because before you ever became
+        the teacher your students know,
+        you were already teaching me.
+
+      </p>
+
+
+      <p>
+
+        You taught me things
+        that never needed a classroom.
+
+        You taught me how to keep trying
+        when something doesn't make sense.
+
+        You taught me that being wrong
+        doesn't mean I'm a failure.
+
+        You taught me to listen,
+        to be patient,
+        to work hard,
+        and to keep learning.
+
+      </p>
+
+
+      <p>
+
+        But more than that,
+        you taught me how to be a person.
+
+      </p>
+
+
+      <p>
+
+        And I don't think
+        I say thank you for that enough.
+
+      </p>
+
+
+      <p>
+
+        I know being a teacher isn't easy.
+
+        There are lessons to prepare,
+        students to guide,
+        problems to solve,
+        responsibilities to carry,
+        and probably a hundred things
+        that nobody else gets to see.
+
+      </p>
+
+
+      <p>
+
+        Yet somehow,
+        after doing all of that,
+
+        you're still Mama when you come home.
+
+      </p>
+
+
+      <p>
+
+        You're still the person
+        who asks if I've eaten.
+
+        The person who reminds me
+        about things I forgot.
+
+        The person who worries.
+
+        The person who gives advice
+        even when I don't ask for it.
+
+        HAHAHA.
+
+      </p>
+
+
+      <p>
+
+        And honestly?
+
+        I'm grateful for all of it.
+
+      </p>
+
+
+      <p>
+
+        Because one day,
+        when I look back at my life,
+
+        I know I'll realize
+        that some of the most important
+        lessons I ever learned
+        weren't written on a board.
+
+      </p>
+
+
+      <p>
+
+        They came from you.
+
+      </p>
+
+
+      <p
+        style="
+        font-family:'Cormorant Garamond',serif;
+        font-size:38px;
+        color:#d99aaa;
+        ">
+
+        Thank you, Mama.
+
+      </p>
+
+
+      <div class="signature">
+
+        — Your student,
+        your anak,
+        forever ♡
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TWO SIDES OF MAMA
+========================= -->
+
+<section>
+
+  <div class="container">
+
+    <div class="label">
+      Two roles. One incredible person.
+    </div>
+
+
+    <h2 class="title">
+
+      The teacher
+      <br>
+      everyone sees.
+
+    </h2>
+
+
+    <div class="split">
+
+
+      <div class="split-card teacher-card">
+
+        <h3>
+          The Teacher
+        </h3>
+
+
+        <p>
+
+          Your students see someone
+          who explains,
+          guides,
+          corrects,
+          encourages,
+          prepares lessons,
+          answers questions,
+          and keeps showing up.
+
+        </p>
+
+
+        <p>
+
+          They see a licensed teacher
+          who chose education
+          as her profession
+          and her calling.
+
+        </p>
+
+
+        <p>
+
+          They see someone
+          who helps other people
+          understand the world
+          a little better.
+
+        </p>
+
+      </div>
+
+
+      <div class="split-card mom-card">
+
+        <h3>
+          The Mama I See
+        </h3>
+
+
+        <p>
+
+          I see the person
+          who comes home tired
+          and still finds a way
+          to care.
+
+        </p>
+
+
+        <p>
+
+          I see the person
+          who worries,
+          reminds,
+          teaches,
+          supports,
+          and loves
+          in ways I probably
+          don't say thank you for
+          enough.
+
+        </p>
+
+
+        <p>
+
+          And I'm lucky
+          that I get to know
+          both sides of you.
+
+        </p>
+
+      </div>
+
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     LESSONS
+========================= -->
+
+<section class="lessons">
+
+  <div class="container">
+
+    <div class="label">
+      Things you taught me
+    </div>
+
+
+    <h2 class="title">
+
+      Lessons that weren't
+      <br>
+      in any textbook.
+
+    </h2>
+
+
+    <div class="lesson-grid">
+
+
+      <div class="lesson">
+
+        <div class="lesson-number">
+          01
+        </div>
+
+        <h3>
+          Keep going.
+        </h3>
+
+        <p>
+
+          Even when the answer
+          doesn't come immediately,
+          that doesn't mean
+          I should stop looking.
+
+        </p>
+
+      </div>
+
+
+      <div class="lesson">
+
+        <div class="lesson-number">
+          02
+        </div>
+
+        <h3>
+          Be kind.
+        </h3>
+
+        <p>
+
+          Intelligence means very little
+          if you forget to be good
+          to the people around you.
+
+        </p>
+
+      </div>
+
+
+      <div class="lesson">
+
+        <div class="lesson-number">
+          03
+        </div>
+
+        <h3>
+          Learn from mistakes.
+        </h3>
+
+        <p>
+
+          Getting something wrong
+          isn't the end.
+
+          Sometimes it's exactly
+          where learning begins.
+
+        </p>
+
+      </div>
+
+
+      <div class="lesson">
+
+        <div class="lesson-number">
+          04
+        </div>
+
+        <h3>
+          Do your best.
+        </h3>
+
+        <p>
+
+          Not because everyone
+          is watching,
+
+          but because you should
+          be proud of the effort
+          you gave.
+
+        </p>
+
+      </div>
+
+
+      <div class="lesson">
+
+        <div class="lesson-number">
+          05
+        </div>
+
+        <h3>
+          Stay curious.
+        </h3>
+
+        <p>
+
+          There is always something
+          new to understand,
+          discover,
+          question,
+          or appreciate.
+
+        </p>
+
+      </div>
+
+
+      <div class="lesson">
+
+        <div class="lesson-number">
+          06
+        </div>
+
+        <h3>
+          Care deeply.
+        </h3>
+
+        <p>
+
+          The people who make
+          the biggest difference
+          are often the ones
+        
